@@ -9,9 +9,11 @@ module ForemanHostOverview
         # Doing it this way so the real certname is returned
         # host.certname will return the fqdn if the certname is nil
         fields += [[_("Certificate Name"), host.send(:read_attribute, :certname)]]
+      end      
+      links = {'VNC' => "vnc://#{host.fqdn}", 'SSH' => "ssh://#{host.fqdn}", 'RDP' => "rdp://#{host.fqdn}"} 
+      if host.fqdn
+        fields += [[_("Connect"), safe_join(links.map { |url| link_to url[0], url[1] }, ' ') ]]
       end
-      fields += [[_("VNC"), link_to("vnc://#{host.fqdn}", "vnc://#{host.fqdn}")]] if host.fqdn
-      fields += [[_("RDP"), link_to("rdp://#{host.fqdn}", "rdp://#{host.fqdn}")]] if host.fqdn
       fields
     end
 
