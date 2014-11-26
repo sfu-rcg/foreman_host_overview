@@ -38,9 +38,19 @@ bundle update foreman_param_lookup
 
 ## Usage
 
-Simply view a host's properties table. You should see some additional rows at the end.
+Simply view a host's properties table. You should see two additional rows at the end
 
-![Example](/example.png?raw=true)
+![Properties](/screenshots/properties.png?raw=true)
+
+Through a tab in the Foreman's settings page, you can toggle whether or not you want this plugin to display non-native connection types for a host:
+
+![Settings](/screenshots/settings.png?raw=true)
+
+|   OS    | Display    |
+| ------- |----------- |
+| Windows | RDP        |
+| Linux   | VNC, & SSH |
+
 
 ## Contributing
 
