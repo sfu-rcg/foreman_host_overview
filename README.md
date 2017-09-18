@@ -9,7 +9,7 @@ The foreman_host_overview gem requires Ruby 2.0.0 or higher.
 Include this gem in one of your Gemfiles (ex: `foreman/bundler.d/Gemfile.local.rb`)
 
 ```ruby
-gem 'foreman_host_overview', :git => "https://github.com/drasang/foreman_host_overview.git"
+gem 'foreman_host_overview', :git => "https://github.com/sfu-rcg/foreman_host_overview.git"
 ```
 
 As the Foreman user:
