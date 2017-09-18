@@ -4,12 +4,12 @@ A Foreman plugin to extend what the properties table includes for a host.
 
 ## Installation
 
-The foreman_host_overview gem requires Ruby 2.0.0 or higher. 
+The foreman_host_overview gem requires Ruby 2.0.0 or higher.
 
 Include this gem in one of your Gemfiles (ex: `foreman/bundler.d/Gemfile.local.rb`)
 
 ```ruby
-gem 'foreman_host_overview', :git => "https://github.com/sfu-rcg/foreman_host_overview.git"
+gem 'foreman_host_overview', :git => "https://github.com/drasang/foreman_host_overview.git"
 ```
 
 As the Foreman user:
@@ -42,9 +42,13 @@ Simply view a host's properties table. You should see two additional rows at the
 
 ![Properties](/screenshots/properties.png?raw=true)
 
-Through a tab in the Foreman's settings page, you can toggle whether or not you want this plugin to display non-native connection types for a host:
+Through a tab in the Foreman's settings page, you can toggle whether or not you want this plugin to display non-native connection types for a host.
+
+Although is possible to use the host ip address for building the connection links, instead of fqdn.
 
 ![Settings](/screenshots/settings.png?raw=true)
+
+Native connections types:
 
 |   OS    | Display    |
 | ------- |----------- |
